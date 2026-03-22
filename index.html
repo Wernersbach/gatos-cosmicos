@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatos Cósmicos - Edição #1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&display=swap');
+
+        :root {
+            --cor-fundo: #ffeb3b;
+            --cor-painel: #ffffff;
+            --cor-borda: #000000;
+            --cor-destaque: #e91e63;
+            --cor-sombra: rgba(0,0,0,0.5);
+            --fonte-titulo: 'Bangers', cursive;
+            --fonte-texto: 'Permanent Marker', cursive;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            background-image: radial-gradient(var(--cor-sombra) 15%, transparent 16%);
+            background-size: 10px 10px;
+            font-family: var(--fonte-texto);
+            color: var(--cor-borda);
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            background-color: var(--cor-destaque);
+            border: 8px solid var(--cor-borda);
+            padding: 20px;
+            margin-bottom: 30px;
+            transform: rotate(-2deg);
+            box-shadow: 10px 10px 0 var(--cor-borda);
+        }
+
+        h1 {
+            font-family: var(--fonte-titulo);
+            font-size: 64px;
+            color: var(--cor-fundo);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            -webkit-text-stroke: 2px var(--cor-borda);
+            text-shadow: 4px 4px 0 var(--cor-borda);
+        }
+
+        .edicao {
+            font-size: 18px;
+            background-color: var(--cor-borda);
+            color: var(--cor-fundo);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .gibi-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .painel {
+            background-color: var(--cor-painel);
+            border: 6px solid var(--cor-borda);
+            padding: 15px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+            box-shadow: 8px 8px 0 var(--cor-sombra);
+        }
+
+        .painel:hover {
+            transform: scale(1.03) rotate(1deg);
+            z-index: 10;
+        }
+
+        .painel img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border: 4px solid var(--cor-borda);
+            margin-bottom: 10px;
+        }
+
+        .painel h3 {
+            font-family: var(--fonte-titulo);
+            font-size: 28px;
+            text-transform: uppercase;
+            color: var(--cor-destaque);
+            margin-bottom: 10px;
+            -webkit-text-stroke: 1px var(--cor-borda);
+        }
+
+        .painel p {
+            font-size: 16px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .balao-fala {
+            background-color: #fff;
+            border: 3px solid #000;
+            border-radius: 20px;
+            padding: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            max-width: 150px;
+            font-size: 12px;
+            transform: rotate(5deg);
+        }
+
+        .balao-fala::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            border-width: 10px 10px 0;
+            border-style: solid;
+            border-color: #000 transparent;
+        }
+
+        .onomatopeia {
+            font-family: var(--fonte-titulo);
+            font-size: 40px;
+            color: #fff;
+            background-color: #ff9800;
+            padding: 10px 20px;
+            border: 5px solid #000;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-10deg);
+            text-transform: uppercase;
+            -webkit-text-stroke: 2px #000;
+            text-shadow: 3px 3px 0 #000;
+            z-index: 5;
+        }
+
+        .painel-2 .onomatopeia { background-color: #4caf50; }
+        .painel-3 .onomatopeia { background-color: #2196f3; }
+        .painel-4 .onomatopeia { background-color: #f44336; }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 4px dashed var(--cor-borda);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gatos Cósmicos</h1>
+        <div class="edicao">Edição #1 - O Ataque do Laser Vermelho</div>
+    </header>
+
+    <main class="gibi-container">
+        
+        <div class="painel painel-1">
+            <div class="balao-fala">"Finalmente, o plano está pronto!"</div>
+            <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=600&auto=format&fit=crop" alt="Hero">
+            <h3>Capitão Bigodes</h3>
+            <p>O líder supremo dos Gatos Laranjas prepara sua frota para conquistar o sofá principal. Nada pode detê-lo!</p>
+            <div class="onomatopeia">MIAU!</div>
+        </div>
+
+        <div class="painel painel-2">
+            <img src="https://images.unsplash.com/photo-1514888286974-8c23e83ed530?q=80&w=600&auto=format&fit=crop" alt="Spy">
+            <h3>Sombra, o Furtivo</h3>
+            <p>Eles acham que não o vemos, mas Sombra já infiltrou a base inimiga. Suas habilidades de furtividade são lendárias.</p>
+            <div class="onomatopeia">ZÁS!</div>
+        </div>
+
+        <div class="painel painel-3">
+            <img src="https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=600&auto=format&fit=crop" alt="Guardian">
+            <h3>O Sentinela Zzz</h3>
+            <p>Enquanto o caos se aproxima, nosso herói decide que a melhor defesa é uma boa soneca de 12 horas. Prioridades.</p>
+            <div class="onomatopeia">RON-RON</div>
+        </div>
+
+        <div class="painel painel-4">
+            <img src="https://images.unsplash.com/photo-1561948955-570b270e7c36?q=80&w=600&auto=format&fit=crop" alt="Battle">
+            <h3>A Batalha Final</h3>
+            <p>A frota avança! O Capitão Bigodes lança seu ataque mais devastador: o temível pulo na cortina. O destino do tapete está em jogo!</p>
+            <div class="onomatopeia">POW!</div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2026 Gatos Cósmicos Inc.</p>
+    </footer>
+
+</body>
+</html>
