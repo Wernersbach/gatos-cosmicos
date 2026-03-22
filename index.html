@@ -67,7 +67,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto 40px auto;
         }
 
         .painel {
@@ -108,29 +108,6 @@
             margin-bottom: 15px;
         }
 
-        .balao-fala {
-            background-color: #fff;
-            border: 3px solid #000;
-            border-radius: 20px;
-            padding: 10px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            max-width: 150px;
-            font-size: 12px;
-            transform: rotate(5deg);
-        }
-
-        .balao-fala::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 20px;
-            border-width: 10px 10px 0;
-            border-style: solid;
-            border-color: #000 transparent;
-        }
-
         .onomatopeia {
             font-family: var(--fonte-titulo);
             font-size: 40px;
@@ -152,6 +129,49 @@
         .painel-3 .onomatopeia { background-color: #2196f3; }
         .painel-4 .onomatopeia { background-color: #f44336; }
 
+        .navegacao-secao {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .paginacao {
+            list-style: none;
+            display: flex;
+            background-color: #fff;
+            border: 4px solid var(--cor-borda);
+            box-shadow: 5px 5px 0 var(--cor-borda);
+            padding: 0;
+        }
+
+        .paginacao > li {
+            border-right: 4px solid var(--cor-borda);
+        }
+
+        .paginacao > li:last-child {
+            border-right: none;
+        }
+
+        .paginacao li a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: var(--cor-borda);
+            font-family: var(--fonte-titulo);
+            font-size: 20px;
+            transition: all 0.2s;
+        }
+
+        .paginacao li a:hover {
+            background-color: var(--cor-destaque);
+            color: white;
+        }
+
+        .paginacao li.ativo a {
+            background-color: var(--cor-borda);
+            color: var(--cor-fundo);
+        }
+
         footer {
             text-align: center;
             margin-top: 50px;
@@ -171,35 +191,44 @@
     <main class="gibi-container">
         
         <div class="painel painel-1">
-            <div class="balao-fala">"Finalmente, o plano está pronto!"</div>
             <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=600&auto=format&fit=crop" alt="Hero">
             <h3>Capitão Bigodes</h3>
-            <p>O líder supremo dos Gatos Laranjas prepara sua frota para conquistar o sofá principal. Nada pode detê-lo!</p>
+            <p>O líder supremo dos Gatos Laranjas prepara sua frota para conquistar o sofá principal.</p>
             <div class="onomatopeia">MIAU!</div>
         </div>
 
         <div class="painel painel-2">
             <img src="https://images.unsplash.com/photo-1514888286974-8c23e83ed530?q=80&w=600&auto=format&fit=crop" alt="Spy">
             <h3>Sombra, o Furtivo</h3>
-            <p>Eles acham que não o vemos, mas Sombra já infiltrou a base inimiga. Suas habilidades de furtividade são lendárias.</p>
+            <p>Sombra já infiltrou a base inimiga. Suas habilidades são lendárias.</p>
             <div class="onomatopeia">ZÁS!</div>
         </div>
 
         <div class="painel painel-3">
             <img src="https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=600&auto=format&fit=crop" alt="Guardian">
             <h3>O Sentinela Zzz</h3>
-            <p>Enquanto o caos se aproxima, nosso herói decide que a melhor defesa é uma boa soneca de 12 horas. Prioridades.</p>
+            <p>Nosso herói decide que a melhor defesa é uma boa soneca de 12 horas.</p>
             <div class="onomatopeia">RON-RON</div>
         </div>
 
         <div class="painel painel-4">
             <img src="https://images.unsplash.com/photo-1561948955-570b270e7c36?q=80&w=600&auto=format&fit=crop" alt="Battle">
             <h3>A Batalha Final</h3>
-            <p>A frota avança! O Capitão Bigodes lança seu ataque mais devastador: o temível pulo na cortina. O destino do tapete está em jogo!</p>
+            <p>A frota avança com o temível pulo na cortina. O destino do tapete está em jogo!</p>
             <div class="onomatopeia">POW!</div>
         </div>
 
     </main>
+
+    <nav class="navegacao-secao">
+        <ul class="paginacao">
+            <li><a href="#">&laquo;</a></li>
+            <li class="ativo"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </nav>
 
     <footer>
         <p>Copyright &copy; 2026 Gatos Cósmicos Inc.</p>
